@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>PushyTao&#39;s Blog</title>
+  
+  <subtitle>慢慢变好就是给自己最好的礼物</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://pushytao.top/"/>
+  <updated>2022-04-19T05:50:19.427Z</updated>
+  <id>http://pushytao.top/</id>
+  
+  <author>
+    <name>PushyTao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VMware 安装 CentOS 8.1 完整教程 </title>
+    <link href="http://pushytao.top/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng.html"/>
+    <id>http://pushytao.top/vmware-an-zhuang-centos-8-1-wan-zheng-jiao-cheng.html</id>
+    <published>2020-03-05T10:29:16.000Z</published>
+    <updated>2022-04-19T05:50:19.427Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;我使用的&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;VMware&lt;/font&gt;版本：&lt;font color=&quot;red&quot; size=&quot;3&quot;&gt;VMware 15 Pro&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;镜像：&lt;font color=&quot;red&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://pushytao.top/categories/Linux/"/>
+    
+    
+      <category term="VMware" scheme="http://pushytao.top/tags/VMware/"/>
+    
+      <category term="CentOS" scheme="http://pushytao.top/tags/CentOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github + Hexo 搭建个人博客超详细教程</title>
+    <link href="http://pushytao.top/1.html"/>
+    <id>http://pushytao.top/1.html</id>
+    <published>2020-02-18T13:17:35.000Z</published>
+    <updated>2022-04-19T05:50:19.426Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://muyiio-1300292673.cos.ap-chongqing.myqcloud.com/%E5%8D%9A%E5%AE%A2/_posts/1/01.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;font color=&quot;magenta&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://pushytao.top/categories/Blog/"/>
+    
+    
+      <category term="Github" scheme="http://pushytao.top/tags/Github/"/>
+    
+      <category term="Hexo" scheme="http://pushytao.top/tags/Hexo/"/>
+    
+      <category term="博客搭建" scheme="http://pushytao.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
+  
+</feed>
