@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="nav-wrap">
-    <a class="brand" href="<%- url_for('/') %>" aria-label="PushyTao 首页"><span class="brand-mark">P<span>_</span></span><span>PushyTao<span class="brand-dot">.</span></span></a>
+    <a class="brand" href="<%- url_for('/') %>" aria-label="PushyTao 首页"><img class="brand-avatar" src="<%- url_for('/images/github-avatar.jpg') %>" alt="" width="32" height="32" decoding="async"><span>PushyTao<span class="brand-dot">.</span></span></a>
     <nav id="site-nav" aria-label="主导航">
       <% [['/', '首页', is_home()], ['/archives/', '归档', is_archive()], ['/topics/', '专题', page.layout === 'topics' || is_category() || is_tag()], ['/about/', '关于', page.path === 'about/index.html']].forEach(([href,label,active]) => { %>
       <a href="<%- url_for(href) %>" <%- active ? 'aria-current="page"' : '' %>><%= label %></a>

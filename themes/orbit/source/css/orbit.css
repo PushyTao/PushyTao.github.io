@@ -14,9 +14,6 @@
   --shadow: 0 24px 70px #0004;
   --font: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
-  --poetry-font:
-    "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun",
-    serif;
   --poetry-ink: #ece5d7;
   --poetry-seal: #ce8679;
 }
@@ -177,21 +174,14 @@ kbd,
   gap: 12px;
   font-weight: 720;
 }
-.brand-mark {
+.brand-avatar {
   height: 32px;
   width: 32px;
-  display: grid;
-  place-content: center;
-  grid-auto-flow: column;
-  border: 1px solid #476879;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  font-size: 20px;
-  color: var(--accent);
-  background: linear-gradient(140deg, #28445766, #101c2b44);
-  font-family: var(--mono);
-}
-.brand-mark span {
-  font-size: 17px;
+  background: var(--surface);
 }
 .brand-dot {
   color: var(--accent);
@@ -344,15 +334,15 @@ kbd,
   border: 1px solid var(--poetry-seal);
   border-radius: 3px 1px 3px 1px;
   color: var(--poetry-seal);
-  font: 600 19px/1 var(--poetry-font);
+  font: 600 19px/1 var(--font);
   letter-spacing: 0;
   transform: rotate(-4deg);
 }
 .hero h1.hero-poem {
   color: var(--poetry-ink);
-  font-family: var(--poetry-font);
+  font-family: var(--font);
   font-size: clamp(36px, 4.4vw, 58px);
-  font-weight: 500;
+  font-weight: 760;
   line-height: 1.65;
   letter-spacing: 0.055em;
   margin-bottom: 15px;
@@ -367,7 +357,7 @@ kbd,
   gap: 5px 10px;
   margin: 0 0 25px;
   color: var(--muted);
-  font: 14px/1.8 var(--poetry-font);
+  font: 14px/1.8 var(--font);
   letter-spacing: 0.06em;
 }
 .poem-rule {
@@ -388,7 +378,7 @@ kbd,
   text-underline-offset: 4px;
 }
 .hero .poetry-signature {
-  font: 12px/1.8 var(--poetry-font);
+  font: 12px/1.8 var(--font);
   letter-spacing: 2px;
 }
 .gradient-text {
@@ -1704,10 +1694,9 @@ dialog::backdrop {
     font-size: 21px;
     gap: 10px;
   }
-  .brand-mark {
+  .brand-avatar {
     height: 28px;
     width: 28px;
-    font-size: 17px;
   }
   .nav-tools {
     margin-left: auto;
