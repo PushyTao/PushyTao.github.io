@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <% const pageTitle = is_home() ? config.title + ' · 保持好奇，持续构建' : (page.title || (is_archive() ? '文章归档' : page.category || page.tag || '探索')) + ' · ' + config.title; const summary = page.description || config.description; %>
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= summary %>">
+  <meta name="theme-color" content="#080e1a">
+  <link rel="canonical" href="<%= url_for(page.path || '', {relative: false}).startsWith('http') ? url_for(page.path || '', {relative: false}) : config.url.replace(/\/$/, '') + url_for(page.path || '') %>">
+  <meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>">
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:description" content="<%= summary %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <meta property="og:url" content="<%= config.url.replace(/\/$/, '') + url_for(page.path || '') %>">
+  <meta property="og:image" content="<%= config.url.replace(/\/$/, '') %>/images/cover-orbit.svg">
+  <link rel="icon" type="image/svg+xml" href="<%- url_for('/images/favicon.svg') %>">
+  <link rel="alternate" type="application/atom+xml" title="PushyTao 订阅" href="<%- url_for('/atom.xml') %>">
+  <script>try{var t=localStorage.getItem('orbit-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="stylesheet" href="<%- url_for('/css/orbit.css') %>">
+  <script type="module" src="<%- url_for('/js/orbit.js') %>"></script>
+</head>
+<body class="<%= is_home() ? 'home' : 'inner-page' %>">
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <%- partial('_partial/icons') %>
+  <%- partial('_partial/header') %>
+  <main id="main"><%- body %></main>
+  <%- partial('_partial/footer') %>
+  <%- partial('_partial/search') %>
+  <button class="back-top icon-button" data-back-top aria-label="返回顶部"><svg><use href="#i-arrow"/></svg></button>
+</body>
+</html>

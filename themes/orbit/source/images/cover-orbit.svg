@@ -1,0 +1,61 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="640"
+  height="420"
+  viewBox="0 0 640 420"
+  fill="none"
+>
+  <defs>
+    <radialGradient id="bg">
+      <stop stop-color="#234957" />
+      <stop offset="1" stop-color="#0b1827" />
+    </radialGradient>
+    <linearGradient
+      id="p"
+      x1="260"
+      y1="90"
+      x2="384"
+      y2="277"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#94d9ce" />
+      <stop offset=".5" stop-color="#376f80" />
+      <stop offset="1" stop-color="#0c2030" />
+    </linearGradient>
+    <linearGradient id="r">
+      <stop stop-color="#6cbcaf" stop-opacity="0" />
+      <stop offset=".5" stop-color="#9ce7d7" />
+      <stop offset="1" stop-color="#668ea7" stop-opacity=".1" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)" />
+  <g stroke="#91c8d0" stroke-opacity=".07">
+    <path
+      d="M0 70h640M0 140h640M0 210h640M0 280h640M0 350h640M80 0v420M160 0v420M240 0v420M320 0v420M400 0v420M480 0v420M560 0v420"
+    />
+    <circle cx="334" cy="194" r="155" />
+  </g>
+  <ellipse
+    cx="334"
+    cy="198"
+    rx="201"
+    ry="57"
+    transform="rotate(-24 334 198)"
+    stroke="url(#r)"
+  />
+  <circle cx="334" cy="193" r="86" fill="url(#p)" />
+  <circle cx="334" cy="193" r="86" stroke="#a6e7d5" stroke-opacity=".32" />
+  <path
+    d="M151 277c14 29 104 18 207-28s173-106 160-135"
+    stroke="url(#r)"
+    stroke-width="2"
+  />
+  <circle cx="502" cy="110" r="3" fill="#b9f3d8" />
+  <circle cx="142" cy="105" r="2" fill="#86c0cc" />
+  <circle cx="443" cy="322" r="1.5" fill="#86c0cc" />
+  <g fill="#86b4bf" font-family="monospace" font-size="10" letter-spacing="3">
+    <text x="32" y="41">PUSHYTAO / DIGITAL GARDEN</text>
+    <text x="33" y="378" fill="#c0e8de" font-size="14">A NEW ORBIT.</text>
+    <text x="530" y="378">001 ↗</text>
+  </g>
+</svg>

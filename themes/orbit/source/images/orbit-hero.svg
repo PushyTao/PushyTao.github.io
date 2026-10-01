@@ -1,0 +1,158 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="980"
+  height="800"
+  viewBox="0 0 980 800"
+  fill="none"
+>
+  <defs>
+    <radialGradient id="halo">
+      <stop stop-color="#4dcac4" stop-opacity=".16" />
+      <stop offset=".5" stop-color="#205b83" stop-opacity=".09" />
+      <stop offset="1" stop-color="#132b42" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="planet" cx=".29" cy=".19" r=".83">
+      <stop stop-color="#a0e7d4" />
+      <stop offset=".2" stop-color="#6aacaf" />
+      <stop offset=".47" stop-color="#2a626f" />
+      <stop offset=".73" stop-color="#133345" />
+      <stop offset="1" stop-color="#07121f" />
+    </radialGradient>
+    <radialGradient id="shade" cx=".8" cy=".85" r=".8">
+      <stop stop-color="#030b17" stop-opacity=".92" />
+      <stop offset=".52" stop-color="#030b17" stop-opacity=".4" />
+      <stop offset="1" stop-color="#030b17" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ring">
+      <stop stop-color="#80bbd9" stop-opacity="0" />
+      <stop offset=".35" stop-color="#b4f6e6" stop-opacity=".8" />
+      <stop offset=".65" stop-color="#7cbac3" stop-opacity=".5" />
+      <stop offset="1" stop-color="#729dcc" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient
+      id="edge"
+      x1="333"
+      y1="197"
+      x2="583"
+      y2="497"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#c8ffec" stop-opacity=".9" />
+      <stop offset=".45" stop-color="#91dce6" stop-opacity=".4" />
+      <stop offset="1" stop-color="#6ca7cb" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="latitude" width="15" height="15" patternUnits="userSpaceOnUse">
+      <path
+        d="M0 0h15"
+        stroke="#bdeadd"
+        stroke-opacity=".065"
+        stroke-width="1"
+      />
+    </pattern>
+    <clipPath id="clip"><circle cx="492" cy="354" r="158" /></clipPath>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" /></filter>
+  </defs>
+  <ellipse cx="498" cy="370" rx="420" ry="370" fill="url(#halo)" />
+  <g stroke="#6b9eb5" stroke-opacity=".15">
+    <circle cx="492" cy="354" r="266" stroke-dasharray="2 7" />
+    <circle cx="492" cy="354" r="323" stroke-dasharray="1 10" />
+    <path d="M145 354h45m605 0h44M492 12v40m0 609v40" />
+    <path d="M491 26v11M484 32h15M820 346v15M813 353h14" />
+  </g>
+  <g transform="rotate(-30 492 354)">
+    <ellipse
+      cx="492"
+      cy="354"
+      rx="346"
+      ry="111"
+      stroke="#7dc6d4"
+      stroke-opacity=".13"
+    />
+    <ellipse
+      cx="492"
+      cy="354"
+      rx="308"
+      ry="91"
+      stroke="url(#ring)"
+      stroke-width="1.4"
+    />
+    <ellipse
+      cx="492"
+      cy="354"
+      rx="293"
+      ry="84"
+      stroke="#a6dce4"
+      stroke-opacity=".17"
+    />
+    <ellipse
+      cx="492"
+      cy="354"
+      rx="329"
+      ry="100"
+      stroke="#70afbe"
+      stroke-opacity=".12"
+      stroke-dasharray="3 9"
+    />
+  </g>
+  <circle cx="492" cy="354" r="158" fill="url(#planet)" />
+  <g clip-path="url(#clip)">
+    <rect x="330" y="193" width="325" height="325" fill="url(#latitude)" />
+    <g stroke="#c9f9df" stroke-opacity=".12">
+      <ellipse cx="492" cy="354" rx="130" ry="158" />
+      <ellipse cx="492" cy="354" rx="80" ry="158" />
+      <ellipse cx="492" cy="354" rx="27" ry="158" />
+      <ellipse cx="492" cy="354" rx="158" ry="32" />
+      <ellipse cx="492" cy="354" rx="158" ry="92" />
+      <ellipse cx="492" cy="354" rx="158" ry="137" />
+    </g>
+    <path
+      d="m332 309 50-47 58 15 39-50 72 49 49-1 43 60-54 32-19 58-70 11-48-52-42 12-33-65z"
+      fill="#adf4d1"
+      opacity=".08"
+    />
+    <circle cx="492" cy="354" r="158" fill="url(#shade)" />
+  </g>
+  <circle cx="492" cy="354" r="158" stroke="url(#edge)" stroke-width="1.3" />
+  <path
+    d="M227 508c25 43 165 13 315-74s246-194 221-236"
+    stroke="url(#ring)"
+    stroke-width="2"
+  />
+  <path
+    d="M212 520c28 50 178 17 339-76s265-208 237-255"
+    stroke="#79b4c2"
+    stroke-opacity=".15"
+  />
+  <path
+    d="M245 497c24 34 155 1 291-77s225-173 202-212"
+    stroke="#a3ece0"
+    stroke-opacity=".18"
+    stroke-width=".7"
+  />
+  <g fill="#a9ecdf">
+    <circle cx="738" cy="202" r="4" />
+    <circle cx="738" cy="202" r="10" opacity=".15" filter="url(#glow)" />
+    <circle cx="267" cy="505" r="2.5" />
+    <circle cx="356" cy="125" r="2" opacity=".65" />
+    <circle cx="707" cy="541" r="2" opacity=".65" />
+    <circle cx="183" cy="278" r="1.5" opacity=".6" />
+    <circle cx="651" cy="103" r="1" />
+    <circle cx="854" cy="418" r="1.5" />
+    <circle cx="490" cy="662" r="1" />
+    <circle cx="322" cy="613" r="1" />
+    <circle cx="822" cy="118" r="1" />
+    <circle cx="170" cy="561" r="1" />
+  </g>
+  <g stroke="#86bebb" stroke-opacity=".4">
+    <path d="M357 154v47l31 28" />
+    <circle cx="388" cy="229" r="3" />
+    <path d="M610 440l59 31h75" />
+    <circle cx="610" cy="440" r="3" />
+    <path d="M304 554v7m-4-3h8M791 289v7m-4-3h8" />
+  </g>
+  <g fill="#76a6b0" font-family="monospace" font-size="8" letter-spacing="2">
+    <text x="306" y="139">CURIOUS BY NATURE</text>
+    <text x="677" y="487">EXPLORE / CREATE</text>
+    <text x="241" y="642" opacity=".6">∞ POSSIBILITIES</text>
+  </g>
+</svg>

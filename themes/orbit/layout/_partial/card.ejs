@@ -1,0 +1,5 @@
+<article class="post-card" data-post-card data-category="<%= post.categories.toArray().map(c => c.name).join(',') %>">
+  <a class="post-cover" href="<%- url_for(post.path) %>" tabindex="-1" aria-hidden="true"><img src="<%- url_for(post.cover || '/images/cover-orbit.svg') %>" alt="" loading="lazy" width="640" height="420"><span class="cover-arrow"><svg><use href="#i-up-right"/></svg></span></a>
+  <div class="post-card-body"><div class="post-topline"><% post.categories.forEach(category => { %><a class="category-label" href="<%- url_for(category.path) %>"><%= category.name %></a><% }); %><span class="post-date"><%= date(post.date, 'YYYY.MM.DD') %></span></div>
+  <h3><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3><p class="post-excerpt"><%= post.description || truncate(strip_html(post.excerpt || post.content), {length:105}) %></p><div class="post-bottom"><div class="post-tags"><% post.tags.limit(2).forEach(tag => { %><a href="<%- url_for(tag.path) %>"># <%= tag.name %></a><% }); %></div><span><%= Math.max(1, Math.ceil(strip_html(post.content).length / 450)) %> 分钟阅读</span></div></div>
+</article>

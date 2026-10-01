@@ -1,0 +1,80 @@
+# Site
+title: PushyTao
+subtitle: 记录思考，连接灵感
+description: 关于技术、构建与持续学习的个人博客。让每一次探索，都留下清晰的记录。
+keywords:
+  - 技术博客
+  - Hexo
+  - 编程
+author: PushyTao
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+url: https://pushytao.github.io/
+root: /
+permalink: posts/:title/
+pretty_urls:
+  trailing_index: false
+  trailing_html: true
+
+# Directories
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render: []
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: []
+filename_case: 1
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: false
+syntax_highlighter: highlight.js
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace: '  '
+  wrap: true
+  hljs: true
+prismjs:
+  enable: false
+
+# Home and archives
+index_generator:
+  path: ''
+  per_page: 6
+  order_by: -date
+archive_generator:
+  per_page: 12
+  yearly: true
+  monthly: true
+category_generator:
+  per_page: 12
+tag_generator:
+  per_page: 12
+default_category: 未分类
+category_map: {}
+tag_map: {}
+date_format: YYYY.MM.DD
+time_format: HH:mm
+updated_option: date
+per_page: 6
+pagination_dir: page
+
+# Theme
+theme: orbit
+ignore:
+  - '**/.DS_Store'

@@ -1,0 +1,16 @@
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="<%- url_for('/') %>" aria-label="PushyTao 首页"><span class="brand-mark">P<span>_</span></span><span>PushyTao<span class="brand-dot">.</span></span></a>
+    <nav id="site-nav" aria-label="主导航">
+      <% [['/', '首页', is_home()], ['/archives/', '归档', is_archive()], ['/topics/', '专题', page.layout === 'topics' || is_category() || is_tag()], ['/about/', '关于', page.path === 'about/index.html']].forEach(([href,label,active]) => { %>
+      <a href="<%- url_for(href) %>" <%- active ? 'aria-current="page"' : '' %>><%= label %></a>
+      <% }); %>
+    </nav>
+    <div class="nav-tools">
+      <button class="search-trigger" data-search-open aria-label="搜索文章"><svg><use href="#i-search"/></svg><span>搜索</span><kbd>⌘ K</kbd></button>
+      <span class="tool-divider"></span>
+      <button class="icon-button" data-theme-toggle aria-label="切换明暗主题" title="切换明暗主题"><svg><use href="#i-sun"/></svg></button>
+      <button class="icon-button menu-toggle" data-menu-toggle aria-label="展开导航" aria-expanded="false" aria-controls="site-nav"><svg><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>

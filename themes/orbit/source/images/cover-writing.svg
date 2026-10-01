@@ -1,0 +1,63 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="640"
+  height="420"
+  viewBox="0 0 640 420"
+  fill="none"
+>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#152239" />
+      <stop offset="1" stop-color="#162935" />
+    </linearGradient>
+    <linearGradient id="line">
+      <stop stop-color="#77bfd2" />
+      <stop offset="1" stop-color="#8290d2" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="420" fill="url(#bg)" />
+  <g stroke="#8dbacb" stroke-opacity=".06">
+    <path
+      d="M0 70h640M0 140h640M0 210h640M0 280h640M0 350h640M80 0v420M160 0v420M240 0v420M320 0v420M400 0v420M480 0v420M560 0v420"
+    />
+  </g>
+  <g transform="translate(166 80) rotate(-7 152 125)">
+    <rect
+      x="19"
+      y="17"
+      width="304"
+      height="232"
+      rx="9"
+      fill="#080f2033"
+      stroke="#80c6d022"
+    />
+    <rect width="304" height="232" rx="9" fill="#0d1929" stroke="#6c94b455" />
+    <path d="M0 35h304" stroke="#536b8844" />
+    <g fill="#7294a5">
+      <circle cx="19" cy="18" r="3" />
+      <circle cx="31" cy="18" r="3" />
+      <circle cx="43" cy="18" r="3" />
+    </g>
+    <text x="25" y="86" font-family="monospace" font-size="24" fill="#99ddcd">
+      # Hello, ideas.
+    </text>
+    <g stroke-linecap="round" stroke-width="5">
+      <path d="M27 110h176M27 127h239" stroke="#49677b" />
+      <path d="M27 158h83" stroke="#97a4d1" />
+      <path d="M121 158h100" stroke="#80c8c4" />
+      <path d="M27 178h139M27 198h209" stroke="#49677b" />
+    </g>
+  </g>
+  <path
+    d="m108 213-16 14 16 14m425-71 16 14-16 14"
+    stroke="url(#line)"
+    stroke-width="2"
+  />
+  <g fill="#93a8cb" font-family="monospace" font-size="10" letter-spacing="3">
+    <text x="32" y="41">WORDS INTO WORLDS</text>
+    <text x="32" y="378" fill="#c7d9ee" font-size="14">
+      WRITE. COMMIT. PUBLISH.
+    </text>
+    <text x="530" y="378">002 ↗</text>
+  </g>
+</svg>
