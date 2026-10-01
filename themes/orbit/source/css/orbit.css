@@ -692,7 +692,7 @@ kbd,
   object-fit: cover;
   border: 1px solid var(--line);
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: 8px;
 }
 .profile-id {
   font-size: 7px;

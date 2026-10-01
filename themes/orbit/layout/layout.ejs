@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="<%= config.title %>">
   <meta property="og:url" content="<%= config.url.replace(/\/$/, '') + url_for(page.path || '') %>">
   <meta property="og:image" content="<%= config.url.replace(/\/$/, '') %>/images/cover-orbit.svg">
-  <link rel="icon" type="image/jpeg" href="<%- url_for('/images/github-avatar.jpg') %>">
+  <link rel="icon" type="image/svg+xml" href="<%- url_for('/images/github-avatar-icon.svg') %>">
   <link rel="alternate" type="application/atom+xml" title="PushyTao 订阅" href="<%- url_for('/atom.xml') %>">
   <script>try{var t=localStorage.getItem('orbit-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
   <link rel="stylesheet" href="<%- url_for('/css/orbit.css') %>">
