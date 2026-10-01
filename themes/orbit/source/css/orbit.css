@@ -14,6 +14,11 @@
   --shadow: 0 24px 70px #0004;
   --font: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+  --poetry-font:
+    "Songti SC", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "SimSun",
+    serif;
+  --poetry-ink: #ece5d7;
+  --poetry-seal: #ce8679;
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -28,6 +33,8 @@
   --accent-rgb: 17, 118, 110;
   --header: rgba(246, 248, 251, 0.92);
   --shadow: 0 24px 70px #1b385512;
+  --poetry-ink: #344944;
+  --poetry-seal: #a94e41;
 }
 * {
   box-sizing: border-box;
@@ -315,6 +322,74 @@ kbd,
   line-height: 1.28;
   letter-spacing: 2px;
   margin: 0 0 23px;
+}
+.hero-poetry .hero-grid {
+  opacity: 0.45;
+}
+.hero-poetry .hero-art {
+  filter: saturate(0.65);
+}
+.hero .poetry-eyebrow {
+  color: var(--muted);
+  font-size: 12px;
+  letter-spacing: 3px;
+  gap: 13px;
+  margin-bottom: 24px;
+}
+.poetry-seal {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 32px;
+  border: 1px solid var(--poetry-seal);
+  border-radius: 3px 1px 3px 1px;
+  color: var(--poetry-seal);
+  font: 600 19px/1 var(--poetry-font);
+  letter-spacing: 0;
+  transform: rotate(-4deg);
+}
+.hero h1.hero-poem {
+  color: var(--poetry-ink);
+  font-family: var(--poetry-font);
+  font-size: clamp(36px, 4.4vw, 58px);
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.055em;
+  margin-bottom: 15px;
+}
+.hero-poem > span {
+  display: block;
+}
+.poem-attribution {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 10px;
+  margin: 0 0 25px;
+  color: var(--muted);
+  font: 14px/1.8 var(--poetry-font);
+  letter-spacing: 0.06em;
+}
+.poem-rule {
+  width: 24px;
+  height: 1px;
+  background: var(--poetry-seal);
+  align-self: center;
+}
+[data-poem-author] {
+  white-space: nowrap;
+}
+.poem-attribution cite {
+  font-style: normal;
+}
+.poem-attribution a:hover {
+  color: var(--poetry-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.hero .poetry-signature {
+  font: 12px/1.8 var(--poetry-font);
+  letter-spacing: 2px;
 }
 .gradient-text {
   background: linear-gradient(110deg, #b4fae6, #67cbdc 80%);
@@ -1703,6 +1778,29 @@ dialog::backdrop {
     line-height: 1.3;
     letter-spacing: 1px;
     margin-bottom: 21px;
+  }
+  .hero h1.hero-poem {
+    font-size: clamp(25px, 7.5vw, 42px);
+    line-height: 1.8;
+    letter-spacing: 0.035em;
+    margin-bottom: 16px;
+  }
+  .hero .poetry-eyebrow {
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 21px;
+  }
+  .poem-attribution {
+    font-size: 12px;
+    gap: 4px 7px;
+    margin-bottom: 22px;
+  }
+  .poem-rule {
+    width: 18px;
+  }
+  .hero .poetry-signature {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
   .hero-description {
     font-size: 12px;

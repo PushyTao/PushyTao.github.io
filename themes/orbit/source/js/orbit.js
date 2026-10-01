@@ -1,5 +1,7 @@
 import { initializeSearch } from "./search.js";
+import { initializePoetry } from "./poetry.js";
 
+initializePoetry();
 initializeSearch();
 
 const root = document.documentElement;

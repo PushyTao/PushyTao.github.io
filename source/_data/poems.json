@@ -1,0 +1,98 @@
+[
+  {
+    "id": "wang-wei-zhong-nan-bie-ye",
+    "lines": ["行到水穷处，", "坐看云起时。"],
+    "dynasty": "唐",
+    "author": "王维",
+    "title": "终南别业",
+    "source": "https://zh.wikisource.org/wiki/終南別業"
+  },
+  {
+    "id": "wang-wei-shan-ju-qiu-ming",
+    "lines": ["明月松间照，", "清泉石上流。"],
+    "dynasty": "唐",
+    "author": "王维",
+    "title": "山居秋暝",
+    "source": "https://zh.wikisource.org/wiki/山居秋暝"
+  },
+  {
+    "id": "meng-haoran-guo-gu-ren-zhuang",
+    "lines": ["绿树村边合，", "青山郭外斜。"],
+    "dynasty": "唐",
+    "author": "孟浩然",
+    "title": "过故人庄",
+    "source": "https://zh.wikisource.org/wiki/過故人莊"
+  },
+  {
+    "id": "tao-yuanming-yin-jiu-05",
+    "lines": ["采菊东篱下，", "悠然见南山。"],
+    "dynasty": "东晋",
+    "author": "陶渊明",
+    "title": "饮酒二十首·其五",
+    "source": "https://zh.wikisource.org/wiki/飲酒二十首#其五"
+  },
+  {
+    "id": "du-fu-wang-yue",
+    "lines": ["会当凌绝顶，", "一览众山小。"],
+    "dynasty": "唐",
+    "author": "杜甫",
+    "title": "望岳",
+    "source": "https://zh.wikisource.org/zh-hans/望岳"
+  },
+  {
+    "id": "wang-bo-song-du-shao-fu",
+    "lines": ["海内存知己，", "天涯若比邻。"],
+    "dynasty": "唐",
+    "author": "王勃",
+    "title": "送杜少府之任蜀州",
+    "source": "https://zh.wikisource.org/wiki/送杜少府之任蜀州"
+  },
+  {
+    "id": "lu-you-you-shan-xi-cun",
+    "lines": ["山重水复疑无路，", "柳暗花明又一村。"],
+    "dynasty": "南宋",
+    "author": "陆游",
+    "title": "游山西村",
+    "source": "https://zh.wikisource.org/wiki/遊山西村"
+  },
+  {
+    "id": "zhu-xi-guan-shu-you-gan-01",
+    "lines": ["问渠那得清如许，", "为有源头活水来。"],
+    "dynasty": "南宋",
+    "author": "朱熹",
+    "title": "观书有感·其一",
+    "source": "https://zh.wikisource.org/wiki/觀書有感#其一"
+  },
+  {
+    "id": "lu-you-dong-ye-du-shu-shi-zi-yu",
+    "lines": ["纸上得来终觉浅，", "绝知此事要躬行。"],
+    "dynasty": "南宋",
+    "author": "陆游",
+    "title": "冬夜读书示子聿",
+    "source": "https://zh.wikisource.org/wiki/冬夜讀書示子聿"
+  },
+  {
+    "id": "liu-yuxi-qiu-ci-01",
+    "lines": ["晴空一鹤排云上，", "便引诗情到碧霄。"],
+    "dynasty": "唐",
+    "author": "刘禹锡",
+    "title": "秋词二首·其一",
+    "source": "https://zh.wikisource.org/wiki/秋詞二首"
+  },
+  {
+    "id": "li-bai-xing-lu-nan-01",
+    "lines": ["长风破浪会有时，", "直挂云帆济沧海。"],
+    "dynasty": "唐",
+    "author": "李白",
+    "title": "行路难三首·其一",
+    "source": "https://zh.wikisource.org/wiki/行路難_(李白)"
+  },
+  {
+    "id": "wang-anshi-deng-fei-lai-feng",
+    "lines": ["不畏浮云遮望眼，", "自缘身在最高层。"],
+    "dynasty": "北宋",
+    "author": "王安石",
+    "title": "登飞来峰",
+    "source": "https://zh.wikisource.org/wiki/王臨川集/卷034#登飛來峰"
+  }
+]

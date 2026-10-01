@@ -69,6 +69,7 @@ npm run check
 | `_config.yml` | 站点标题、作者、域名、时区和分页 |
 | `source/_posts/` | 正式文章 |
 | `source/_drafts/` | 未公开草稿 |
+| `source/_data/poems.json` | 首页随机诗句、作者、篇名与原文链接 |
 | `source/about/`、`source/topics/` | 关于与专题页面 |
 | `scaffolds/` | 新建文章、草稿、页面的模板 |
 | `themes/orbit/layout/` | EJS 页面模板 |
@@ -77,6 +78,8 @@ npm run check
 | `tests/` | 搜索与站点生成检查 |
 
 首页、归档、分类、标签与正文由同一批 Markdown 内容生成。站点地址配置为 `https://pushytao.github.io/`；若之后启用自定义域名，请同时更新 `_config.yml` 中的 `url` 和 GitHub Pages 域名设置。
+
+首页每次加载从 `source/_data/poems.json` 随机选一组诗句，并使用浏览器会话存储避免同一标签页连续重复。新增诗句时保留唯一的 `id`，填写两行 `lines`、朝代 `dynasty`、作者 `author`、篇名 `title` 和原文地址 `source`。诗句随站点构建，不调用外部接口；禁用 JavaScript 时显示列表中的第一组，浏览器禁止存储时仍可随机展示，但无法记住上一组。
 
 ## GitHub Pages 发布
 

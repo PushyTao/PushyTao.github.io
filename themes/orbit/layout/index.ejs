@@ -1,12 +1,17 @@
-<section class="hero" aria-labelledby="hero-title">
+<% const poems = site.data.poems; const openingPoem = poems[0]; %>
+<section class="hero hero-poetry" aria-labelledby="hero-title">
   <div class="hero-grid" aria-hidden="true"></div>
   <img class="hero-art" src="<%- url_for('/images/orbit-hero.svg') %>" alt="" fetchpriority="high" width="980" height="800">
   <div class="hero-inner"><div class="hero-copy">
-    <p class="eyebrow"><span class="status-dot"></span> HELLO WORLD. HELLO POSSIBILITY.</p>
-    <h1 id="hero-title">保持好奇<span class="cyan">。</span><br>持续<span class="gradient-text">构建</span><span class="cyan">。</span></h1>
+    <p class="eyebrow poetry-eyebrow"><span class="poetry-seal" aria-hidden="true">诗</span> 与诗相逢 · 字里山河</p>
+    <div data-poetry>
+      <h1 id="hero-title" class="hero-poem"><span data-poem-line><%= openingPoem.lines[0] %></span><span data-poem-line><%= openingPoem.lines[1] %></span></h1>
+      <p class="poem-attribution"><span class="poem-rule" aria-hidden="true"></span><span data-poem-author><%= openingPoem.dynasty %> · <%= openingPoem.author %></span><cite><a data-poem-source href="<%= openingPoem.source %>" target="_blank" rel="noopener noreferrer">《<%= openingPoem.title %>》</a></cite></p>
+      <script type="application/json" id="hero-poems"><%- JSON.stringify(poems).replace(/</g, '\\u003c') %></script>
+    </div>
     <p class="hero-description">我是 <strong>PushyTao</strong>，欢迎来到我的数字花园。<br>在代码与文字之间，记录探索，分享发现。</p>
     <div class="hero-actions"><a class="button button-primary" href="#latest">探索文章 <svg><use href="#i-arrow"/></svg></a><a class="button button-quiet" href="https://github.com/PushyTao" target="_blank" rel="noopener noreferrer"><svg><use href="#i-github"/></svg> GitHub <span>↗</span></a></div>
-    <div class="hero-signature"><span class="mono">&lt; / &gt;</span><span>THINK. BUILD. SHARE.</span><span class="signature-line"></span></div>
+    <div class="hero-signature poetry-signature"><span>以文字留住灵感，以代码探索远方。</span><span class="signature-line"></span></div>
   </div></div>
   <div class="orbit-caption" aria-hidden="true"><span class="crosshair">+</span><span>IDEAS IN ORBIT<br><small>EVERY THOUGHT, A NEW POSSIBILITY</small></span></div>
   <a class="scroll-cue" href="#latest"><span>SCROLL TO EXPLORE</span><span>↓</span></a>
