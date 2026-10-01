@@ -15,7 +15,7 @@
   --font: Inter, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   --mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
   --poetry-ink: #ece5d7;
-  --poetry-seal: #ce8679;
+  --poetry-accent: #ce8679;
 }
 :root[data-theme="light"] {
   color-scheme: light;
@@ -31,7 +31,7 @@
   --header: rgba(246, 248, 251, 0.92);
   --shadow: 0 24px 70px #1b385512;
   --poetry-ink: #344944;
-  --poetry-seal: #a94e41;
+  --poetry-accent: #a94e41;
 }
 * {
   box-sizing: border-box;
@@ -319,25 +319,6 @@ kbd,
 .hero-poetry .hero-art {
   filter: saturate(0.65);
 }
-.hero .poetry-eyebrow {
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 3px;
-  gap: 13px;
-  margin-bottom: 24px;
-}
-.poetry-seal {
-  display: inline-grid;
-  place-items: center;
-  width: 30px;
-  height: 32px;
-  border: 1px solid var(--poetry-seal);
-  border-radius: 3px 1px 3px 1px;
-  color: var(--poetry-seal);
-  font: 600 19px/1 var(--font);
-  letter-spacing: 0;
-  transform: rotate(-4deg);
-}
 .hero h1.hero-poem {
   color: var(--poetry-ink);
   font-family: var(--font);
@@ -363,7 +344,7 @@ kbd,
 .poem-rule {
   width: 24px;
   height: 1px;
-  background: var(--poetry-seal);
+  background: var(--poetry-accent);
   align-self: center;
 }
 [data-poem-author] {
@@ -704,20 +685,14 @@ kbd,
   align-items: center;
   margin-bottom: 18px;
 }
-.avatar-mark {
+.profile-avatar {
   width: 42px;
   height: 42px;
-  display: grid;
-  grid-auto-flow: column;
-  place-content: center;
-  border: 1px solid #48716f66;
-  background: linear-gradient(140deg, #304745, #122731);
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--surface);
   border-radius: 12px;
-  color: #a7ede0;
-  font: 24px var(--mono);
-}
-.avatar-mark span {
-  color: #779c9b;
 }
 .profile-id {
   font-size: 7px;
@@ -1126,14 +1101,13 @@ kbd,
   color: var(--muted);
 }
 .small-avatar {
-  display: grid;
-  place-items: center;
   width: 29px;
   height: 29px;
+  flex-shrink: 0;
+  object-fit: cover;
   border: 1px solid var(--line);
   border-radius: 8px;
-  font: 12px var(--mono);
-  color: var(--accent);
+  background: var(--surface);
 }
 .reading-shell {
   display: grid;
@@ -1773,11 +1747,6 @@ dialog::backdrop {
     line-height: 1.8;
     letter-spacing: 0.035em;
     margin-bottom: 16px;
-  }
-  .hero .poetry-eyebrow {
-    font-size: 10px;
-    letter-spacing: 2px;
-    margin-bottom: 21px;
   }
   .poem-attribution {
     font-size: 12px;
