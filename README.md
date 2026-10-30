@@ -70,7 +70,8 @@ npm run check
 | `source/_posts/` | 正式文章 |
 | `source/_drafts/` | 未公开草稿 |
 | `source/_data/poems.json` | 首页随机诗句、作者、篇名与原文链接 |
-| `source/about/`、`source/topics/` | 关于与专题页面 |
+| `source/_data/links.json` | 友链名称、地址、简介与可选头像 |
+| `source/about/`、`source/topics/`、`source/links/` | 关于、专题与友链页面 |
 | `scaffolds/` | 新建文章、草稿、页面的模板 |
 | `themes/orbit/layout/` | EJS 页面模板 |
 | `themes/orbit/source/` | CSS、浏览器脚本与本地 SVG 插图 |
@@ -80,6 +81,22 @@ npm run check
 首页、归档、分类、标签与正文由同一批 Markdown 内容生成。站点地址配置为 `https://pushytao.github.io/`；若之后启用自定义域名，请同时更新 `_config.yml` 中的 `url` 和 GitHub Pages 域名设置。
 
 首页每次加载从 `source/_data/poems.json` 随机选一组诗句，并使用浏览器会话存储避免同一标签页连续重复。新增诗句时保留唯一的 `id`，填写两行 `lines`、朝代 `dynasty`、作者 `author`、篇名 `title` 和原文地址 `source`。诗句随站点构建，不调用外部接口；禁用 JavaScript 时显示列表中的第一组，浏览器禁止存储时仍可随机展示，但无法记住上一组。
+
+## 维护友链
+
+导航中的「友链」位于「专题」与「关于」之间，页面地址为 `/links/`。编辑 `source/_data/links.json` 即可新增、修改或排序卡片：
+
+```json
+[
+  {
+    "name": "Qiwen",
+    "url": "https://qiwenfly.github.io/",
+    "description": "Qiwen 的个人博客"
+  }
+]
+```
+
+每项填写 `name`、完整的 `https://` 或 `http://` 地址 `url`、简介 `description`。可选的 `avatar` 填写已放入 `source/images/` 的图片路径，如 `/images/friends/site-avatar.jpg`；未提供头像时显示站名首字。列表顺序就是展示顺序，空数组 `[]` 会显示空状态。友链在新标签页打开，无需额外脚本；修改后运行 `npm run build` 和 `npm run check`。
 
 ## GitHub Pages 发布
 

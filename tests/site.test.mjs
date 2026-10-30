@@ -59,6 +59,7 @@ test("published routes, search data and feeds are generated, with the original t
     "index.html",
     "archives/index.html",
     "topics/index.html",
+    "links/index.html",
     "about/index.html",
     "404.html",
     "atom.xml",
@@ -124,6 +125,23 @@ test("every generated HTML page has metadata and valid internal href/src destina
       .join("/")
       .replace(/index\.html$/, "");
     const pageUrl = new URL(route, `${origin}/`);
+    const html = await readFile(file, "utf8");
+    const navigation = html.match(/<nav\b[^>]*id="site-nav"[^>]*>([\s\S]*?)<\/nav>/i);
+    if (navigation) {
+      const links = tags(navigation[1]).filter((tag) => tag.name === "a");
+      const destinations = links.map((link) => new URL(link.attrs.href, pageUrl).pathname);
+      const topicsIndex = destinations.indexOf("/topics/");
+      assert.deepEqual(destinations.slice(topicsIndex, topicsIndex + 3), [
+        "/topics/", "/links/", "/about/",
+      ], `${route}: friends link belongs between topics and about`);
+      if (route === "links/") {
+        assert.deepEqual(
+          links.filter((link) => link.attrs["aria-current"] === "page").map((link) => link.attrs.href),
+          ["/links/"],
+          "The friends page marks only its own navigation item as current",
+        );
+      }
+    }
     assert.ok(
       elements.some(
         (tag) =>

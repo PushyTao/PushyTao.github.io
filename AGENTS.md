@@ -19,8 +19,9 @@
 | [source/_posts/](source/_posts/) | 正式文章 Markdown；新增博客文章放这里，不放仓库根目录 |
 | [source/_drafts/](source/_drafts/) | 未完成草稿，默认不生成正式页面 |
 | [source/images/](source/images/) | 文章配图、头像及站点图标 |
-| [source/about/](source/about/)、[source/topics/](source/topics/)、[source/404.md](source/404.md) | 关于、专题和错误页面的源文件 |
+| [source/about/](source/about/)、[source/topics/](source/topics/)、[source/links/](source/links/)、[source/404.md](source/404.md) | 关于、专题、友链和错误页面的源文件 |
 | [source/_data/poems.json](source/_data/poems.json) | 首页随机诗句数据 |
+| [source/_data/links.json](source/_data/links.json) | 友链数据；字段与维护方式见 [README](README.md#维护友链) |
 | [scaffolds/](scaffolds/) | 新文章、草稿和独立页面的模板 |
 | [themes/orbit/layout/](themes/orbit/layout/) | 页面 EJS；公共组件在 `_partial/` |
 | [themes/orbit/source/](themes/orbit/source/) | 主题 CSS、浏览器脚本及内置 SVG 插图 |

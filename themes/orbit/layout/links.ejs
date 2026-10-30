@@ -1,0 +1,30 @@
+<% const friends = site.data.links || []; %>
+<section class="page-banner content-shell">
+  <p class="eyebrow">FRIENDS & CONNECTIONS</p>
+  <h1><%= page.title %><span class="cyan">.</span></h1>
+  <% if (page.description) { %><p><%= page.description %></p><% } %>
+</section>
+<section class="content-shell friends-shell" aria-label="友情链接列表">
+  <% if (friends.length) { %>
+  <ul class="friends-grid">
+    <% friends.forEach(friend => { %>
+    <li>
+      <a class="friend-card" href="<%= url_for(friend.url) %>" target="_blank" rel="friend noopener noreferrer" aria-label="<%= friend.name %>（在新标签页打开）">
+        <% if (friend.avatar) { %>
+        <img class="friend-avatar" src="<%= url_for(friend.avatar) %>" alt="" width="56" height="56" loading="lazy" decoding="async">
+        <% } else { %>
+        <span class="friend-avatar friend-initial" aria-hidden="true"><%= Array.from(friend.name)[0] %></span>
+        <% } %>
+        <span class="friend-info">
+          <span class="friend-name"><%= friend.name %></span>
+          <span class="friend-description"><%= friend.description %></span>
+        </span>
+        <svg class="friend-arrow" aria-hidden="true"><use href="#i-up-right"/></svg>
+      </a>
+    </li>
+    <% }); %>
+  </ul>
+  <% } else { %>
+  <p class="friends-empty">友链正在整理中，期待与你相遇。</p>
+  <% } %>
+</section>
