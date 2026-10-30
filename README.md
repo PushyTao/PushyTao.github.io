@@ -91,12 +91,13 @@ npm run check
   {
     "name": "Qiwen",
     "url": "https://qiwenfly.github.io/",
-    "description": "Qiwen 的个人博客"
+    "description": "Qiwen 的个人博客",
+    "avatar": "https://avatars.githubusercontent.com/u/113513661?v=4"
   }
 ]
 ```
 
-每项填写 `name`、完整的 `https://` 或 `http://` 地址 `url`、简介 `description`。可选的 `avatar` 填写已放入 `source/images/` 的图片路径，如 `/images/friends/site-avatar.jpg`；未提供头像时显示站名首字。列表顺序就是展示顺序，空数组 `[]` 会显示空状态。友链在新标签页打开，无需额外脚本；修改后运行 `npm run build` 和 `npm run check`。
+每项填写 `name`、完整的 `https://` 或 `http://` 地址 `url`、简介 `description`。`avatar` 优先填写对方的 GitHub 头像 URL，由浏览器直接加载，头像更新后无需重新构建本站（可能存在缓存延迟）。也支持已放入 `source/images/` 的本地图片路径；未提供头像时显示站名首字。列表顺序就是展示顺序，空数组 `[]` 会显示空状态。友链在新标签页打开，无需额外脚本；修改配置后运行 `npm run build` 和 `npm run check`。
 
 ## GitHub Pages 发布
 
