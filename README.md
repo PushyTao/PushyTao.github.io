@@ -99,6 +99,8 @@ npm run check
 
 每项填写 `name`、完整的 `https://` 或 `http://` 地址 `url`、简介 `description`。`avatar` 优先填写对方的 GitHub 头像 URL，由浏览器直接加载，头像更新后无需重新构建本站（可能存在缓存延迟）。也支持已放入 `source/images/` 的本地图片路径；未提供头像时显示站名首字。列表顺序就是展示顺序，空数组 `[]` 会显示空状态。友链在新标签页打开，无需额外脚本；修改配置后运行 `npm run build` 和 `npm run check`。
 
+友链以头像在上、名称与简介在下的小方块展示。主题 CSS 地址在每次生成时按文件内容自动附带版本标识，样式更新后浏览器会请求新版本，减少发布后仍显示旧布局的情况。
+
 ## GitHub Pages 发布
 
 `.github/workflows/pages.yml` 在 `main` 推送后自动运行：安装依赖 → 构建 → 检查 → 上传 `public/` → 部署到 GitHub Pages。工作流使用 Node.js 22 和官方 Pages Actions，无需配置个人访问令牌。

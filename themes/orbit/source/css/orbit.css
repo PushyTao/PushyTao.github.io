@@ -1062,8 +1062,8 @@ kbd,
 }
 .friends-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, 176px);
+  gap: 18px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1072,16 +1072,17 @@ kbd,
   min-width: 0;
 }
 .friend-card {
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr) 18px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
-  height: 100%;
-  min-height: 128px;
-  padding: 24px;
+  justify-content: center;
+  gap: 14px;
+  aspect-ratio: 1;
+  padding: 20px 14px;
   border: 1px solid var(--line);
-  border-radius: 9px;
+  border-radius: 14px;
   background: var(--surface);
+  text-align: center;
 }
 .friend-card:hover,
 .friend-card:focus-visible {
@@ -1090,8 +1091,9 @@ kbd,
   transform: translateY(-3px);
 }
 .friend-avatar {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
   object-fit: cover;
   border-radius: 50%;
   background: rgba(var(--accent-rgb), 0.09);
@@ -1104,28 +1106,28 @@ kbd,
   font: 24px var(--mono);
 }
 .friend-info {
+  width: 100%;
   min-width: 0;
   overflow-wrap: anywhere;
 }
 .friend-name {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   color: var(--text);
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 650;
 }
 .friend-description {
-  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
   color: var(--muted);
   font-size: 12px;
   line-height: 1.8;
 }
-.friend-arrow {
-  width: 18px;
-  color: var(--subtle);
-}
 .friend-card:hover .friend-name,
-.friend-card:hover .friend-arrow {
+.friend-card:focus-visible .friend-name {
   color: var(--accent);
 }
 .friends-empty {
@@ -1134,6 +1136,20 @@ kbd,
   border-radius: 9px;
   color: var(--muted);
   text-align: center;
+}
+@media (max-width: 620px) {
+  .friends-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 14px;
+  }
+  .friend-card {
+    padding: 16px 10px;
+    gap: 10px;
+  }
+  .friend-avatar {
+    width: 56px;
+    height: 56px;
+  }
 }
 .page-prose {
   max-width: 790px;

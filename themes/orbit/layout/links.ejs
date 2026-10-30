@@ -11,7 +11,7 @@
     <li>
       <a class="friend-card" href="<%= url_for(friend.url) %>" target="_blank" rel="friend noopener noreferrer" aria-label="<%= friend.name %>（在新标签页打开）">
         <% if (friend.avatar) { %>
-        <img class="friend-avatar" src="<%= url_for(friend.avatar) %>" alt="" width="56" height="56" loading="lazy" decoding="async">
+        <img class="friend-avatar" src="<%= url_for(friend.avatar) %>" alt="" width="64" height="64" loading="lazy" decoding="async">
         <% } else { %>
         <span class="friend-avatar friend-initial" aria-hidden="true"><%= Array.from(friend.name)[0] %></span>
         <% } %>
@@ -19,7 +19,6 @@
           <span class="friend-name"><%= friend.name %></span>
           <span class="friend-description"><%= friend.description %></span>
         </span>
-        <svg class="friend-arrow" aria-hidden="true"><use href="#i-up-right"/></svg>
       </a>
     </li>
     <% }); %>

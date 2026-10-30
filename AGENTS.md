@@ -26,6 +26,7 @@
 | [themes/orbit/layout/](themes/orbit/layout/) | 页面 EJS；公共组件在 `_partial/` |
 | [themes/orbit/source/](themes/orbit/source/) | 主题 CSS、浏览器脚本及内置 SVG 插图 |
 | [themes/orbit/scripts/generators.js](themes/orbit/scripts/generators.js) | 生成搜索索引、Atom 订阅和 sitemap |
+| [themes/orbit/scripts/assets.js](themes/orbit/scripts/assets.js) | 生成 CSS 内容版本标识，避免发布后复用旧样式缓存 |
 | [tests/](tests/) | Node 内置测试，覆盖生成器、搜索和生成后的站点 |
 | [.github/workflows/pages.yml](.github/workflows/pages.yml) | GitHub Pages 构建与部署 |
 | [docs/superpowers/](docs/superpowers/) | 建站设计与实施记录，可能包含已过时的细节 |
