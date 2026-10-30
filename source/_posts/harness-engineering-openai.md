@@ -1,7 +1,7 @@
 ---
 title: "Harness engineering: leveraging Codex in an agent-first world"
 date: 2026-02-11 00:00:00
-permalink: posts/HarnessEngineering_OpenAI/
+permalink: posts/harness-engineering-openai/
 description: OpenAI 的 Harness engineering 实践：通过环境设计、知识管理、可观测性和架构约束，让 Codex 智能体可靠地构建软件。
 categories:
   - 技术笔记

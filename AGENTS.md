@@ -36,6 +36,7 @@
 - 文件名与显示标题分开：文件名用于稳定地址，`title` 面向读者，可使用中文或保留原文标题；产品名称在标题和标签中保留官方写法，如 OpenAI、Codex、GitHub。
 - 当前链接格式为 `posts/:title/`。未另设 `slug` 或 `permalink` 时，文件名决定文章地址；例如 `harness-engineering-openai.md` 对应 `/posts/harness-engineering-openai/`。修改显示标题通常不改变地址。
 - 已发布文章需要重命名时，先核对线上原地址；通过显式 `permalink` 保留原 URL，或为旧地址提供跳转并更新站内引用。不要仅为统一命名而使已有链接失效，也不要让两篇文章使用相同的永久链接。
+- 正式地址迁移时，将文章 `permalink` 改为新地址，确保文章列表、搜索、订阅和 sitemap 直接使用新地址。旧地址跳转页放在对应的 `source/posts/旧路径/index.html`，并将该文件加入 `_config.yml` 的 `skip_render`，作为静态文件复制，避免进入页面索引。参考 [Harness 旧地址跳转页](source/posts/HarnessEngineering_OpenAI/index.html)；保留查询参数和锚点，并提供禁用脚本时的自动跳转及可点击链接。
 - 新增图片使用小写、以 `-` 分词的描述性名称，如 `architecture-layers.png`。按文章分目录时，目录名与文章文件名去掉 `.md` 后一致，如 `source/images/harness-engineering-openai/`；文中引用 `/images/harness-engineering-openai/architecture-layers.png`。这些是命名示例，引用前须放入真实图片。
 - 分类和标签优先复用现有名称，避免仅大小写、空格或同义词不同的重复项；分类表示主题，标签表示涉及的技术、工具或产品。它们不受文件名的小写规则限制。
 
