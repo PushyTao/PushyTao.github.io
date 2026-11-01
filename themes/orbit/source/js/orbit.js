@@ -1,5 +1,6 @@
 import { initializeSearch } from "./search.js";
 import { initializePoetry } from "./poetry.js";
+import { initializeReadingControls } from "./reading.js";
 
 initializePoetry();
 initializeSearch();
@@ -195,6 +196,7 @@ function scheduleScroll() {
 }
 window.addEventListener("scroll", scheduleScroll, { passive: true });
 window.addEventListener("resize", scheduleScroll);
+initializeReadingControls(document, scheduleScroll);
 updateScroll();
 backTop?.addEventListener("click", () => {
   window.scrollTo({

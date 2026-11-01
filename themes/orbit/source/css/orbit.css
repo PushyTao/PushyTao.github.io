@@ -1211,6 +1211,77 @@ kbd,
   padding-top: 43px;
   padding-bottom: 75px;
 }
+.reading-shell > article {
+  min-width: 0;
+}
+.reading-controls {
+  position: sticky;
+  top: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 12px;
+  margin-bottom: 28px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 4px 18px #0000000a;
+  color: var(--muted);
+  font-size: 12px;
+}
+.reading-controls-label {
+  white-space: nowrap;
+}
+.reading-controls-actions,
+.reading-size-stepper {
+  display: flex;
+  align-items: center;
+}
+.reading-controls-actions {
+  gap: 8px;
+}
+.reading-size-stepper {
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--bg);
+}
+.reading-controls button {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  line-height: 1;
+}
+.reading-size-stepper button {
+  font: 16px var(--font);
+}
+.reading-controls output {
+  min-width: 48px;
+  text-align: center;
+  color: var(--accent);
+  font: 12px var(--mono);
+}
+.reading-controls button:hover:not(:disabled) {
+  background: var(--surface-hover);
+  color: var(--accent);
+}
+.reading-controls button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.reading-controls button:focus-visible {
+  outline-offset: 2px;
+}
+.reading-shell .post-content {
+  font-size: var(--article-font-size, 15px);
+}
+.reading-shell .post-content [id] {
+  scroll-margin-top: 80px;
+}
 .post-content {
   font-size: 15px;
   color: var(--muted);
@@ -1219,14 +1290,14 @@ kbd,
   min-width: 0;
 }
 .post-content h2 {
-  font-size: 25px;
+  font-size: 1.6667em;
   color: var(--text);
   margin: 42px 0 19px;
   padding-bottom: 13px;
   border-bottom: 1px solid var(--line);
 }
 .post-content h3 {
-  font-size: 20px;
+  font-size: 1.3333em;
   color: var(--text);
   margin: 29px 0 15px;
 }
@@ -1311,7 +1382,7 @@ kbd,
 }
 .post-content .highlight .gutter pre {
   padding-right: 0;
-  font-size: 12px;
+  font-size: 0.9231em;
 }
 .post-content .highlight .code {
   width: 100%;
@@ -1336,7 +1407,7 @@ kbd,
   max-width: 100%;
   overflow: auto;
   margin: 25px 0;
-  font-size: 13px;
+  font-size: 0.8667em;
 }
 .post-content th,
 .post-content td {
@@ -1346,6 +1417,9 @@ kbd,
 .post-content th {
   color: var(--text);
   background: var(--surface);
+}
+.reading-shell .post-content th {
+  min-width: 7em;
 }
 .post-content img {
   border-radius: 8px;
@@ -2124,10 +2198,10 @@ dialog::backdrop {
     line-height: 1.95;
   }
   .post-content h2 {
-    font-size: 22px;
+    font-size: 1.5714em;
   }
   .post-content h3 {
-    font-size: 18px;
+    font-size: 1.2857em;
   }
   .post-content ul,
   .post-content ol {
@@ -2135,7 +2209,10 @@ dialog::backdrop {
   }
   .post-content pre {
     padding: 24px 14px;
-    font-size: 12px;
+    font-size: 0.8571em;
+  }
+  .post-content .highlight pre {
+    font-size: 1em;
   }
   .post-content blockquote {
     padding: 15px 17px;

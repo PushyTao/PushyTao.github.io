@@ -82,6 +82,10 @@ npm run check
 
 首页每次加载从 `source/_data/poems.json` 随机选一组诗句，并使用浏览器会话存储避免同一标签页连续重复。新增诗句时保留唯一的 `id`，填写两行 `lines`、朝代 `dynasty`、作者 `author`、篇名 `title` 和原文地址 `source`。诗句随站点构建，不调用外部接口；禁用 JavaScript 时显示列表中的第一组，浏览器禁止存储时仍可随机展示，但无法记住上一组。
 
+## 阅读字号
+
+文章正文顶部提供「正文字号」工具条，阅读时吸附在页面顶部。使用 A− / A+ 以 1px 调整，范围为 14–22px，默认 15px；「重置」恢复默认。设置保存在当前浏览器，并在其他文章及刷新后沿用。正文标题、表格和代码随之缩放，站点导航、文章页标题和目录不受影响。禁用存储时仍可调整，禁用 JavaScript 时隐藏控件并保持正文可读。模板在 `themes/orbit/layout/_partial/reading-controls.ejs`，交互在 `themes/orbit/source/js/reading.js`。
+
 ## 维护友链
 
 导航中的「友链」位于「专题」与「关于」之间，页面地址为 `/links/`。编辑 `source/_data/links.json` 即可新增、修改或排序卡片：

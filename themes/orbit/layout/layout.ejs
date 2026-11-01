@@ -17,6 +17,9 @@
   <link rel="icon" type="image/svg+xml" href="<%- url_for('/images/github-avatar-icon.svg') %>">
   <link rel="alternate" type="application/atom+xml" title="PushyTao 订阅" href="<%- url_for('/atom.xml') %>">
   <script>try{var t=localStorage.getItem('orbit-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+  <% if (is_post()) { %>
+  <script>try{var s=Number(localStorage.getItem('orbit-article-font-size'));if(Number.isInteger(s)&&s>=14&&s<=22)document.documentElement.style.setProperty('--article-font-size',s+'px')}catch(e){}</script>
+  <% } %>
   <link rel="stylesheet" href="<%= orbit_stylesheet_url() %>">
   <script type="module" src="<%- url_for('/js/orbit.js') %>"></script>
 </head>
