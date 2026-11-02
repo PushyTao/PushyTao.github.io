@@ -20,6 +20,8 @@ By [Andrew Ng](https://x.com/AndrewYNg/status/2071988145667928442)
 
 在 Boris Cherny（Claude Code 的创造者）和 Peter Steinberger（OpenClaw 的创造者）提到“循环工程”（Loop Engineering）的内容在社交媒体上广泛传播后，这个词成了热门术语。如今，循环已成为让 AI 智能体持续迭代、构建软件的关键。在这封信中，我想分享构建从 0 到 1 的产品时所用的三个关键循环，如下图所示。这些循环不仅指导我如何构建软件，也指导我决定要构建什么软件。
 
+![3 key product development loops](/images/loop-engineering/three-product-development-loops.webp)
+
 <!-- more -->
 
 Agentic coding loop: Given a product specification and optionally a set of evals (that is, a dataset against which to measure performance), we can have an AI agent write code, test its work, and keep iterating until the code is bug-free and meets its specification. This idea of closing the loop took off around the end of last year, and it has been a game changer in enabling coding agents to work longer productively without human intervention. For example, over the weekend, I was building an app for my daughter to practice typing, and my coding agent could easily work for around an hour, using a web browser to check what it had built multiple times before getting back to me, without needing my intervention.
@@ -61,5 +63,3 @@ I will write more about how to do this in future posts, but for now, I find it e
 [Original text: The Batch]
 
 [原文：The Batch]
-
-![3 key product development loops](../images/loop-engineering/three-product-development-loops.webp)
